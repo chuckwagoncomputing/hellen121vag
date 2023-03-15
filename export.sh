@@ -1,6 +1,9 @@
 #!/bin/env bash
 
-[ -n "$1" ] || echo "Pass file name without extension" && exit 1;
+if [ -z "$1" ]; then
+  echo "Pass file name without extension"
+  exit 1
+fi
 
 IN="$1"
 
